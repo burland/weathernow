@@ -1,0 +1,25 @@
+.header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  // border-bottom: 1px solid $alt;
+
+  h2 {
+    padding-left: 15px;
+    padding-top: 12px;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: $text-main;
+    }
+
+    a:hover {
+      color: $text-alt;
+    }
+  }
+
+  button {
+    float: right;
+  }
+}

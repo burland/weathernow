@@ -1,0 +1,33 @@
+{
+  "name": "wn",
+  "version": "0.1.0",
+  "description": "A weather app.",
+  "main": "index.js",
+  "repository": "https://bitbucket.org/chrisburland/wn",
+  "author": "Christian Burland Mankowski <chrisaburland@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"yarn run watch-js\" \"yarn run watch-sass\" \"yarn run server\"",
+    "build": "webpack -p && node-sass styles -o public/css",
+    "watch-js": "webpack -d --watch",
+    "watch-sass": "node-sass -w styles/styles.scss -o public/css",
+    "server": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "node-sass": "^4.7.2",
+    "webpack": "^3.10.0"
+  }
+}
